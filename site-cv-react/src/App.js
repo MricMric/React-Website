@@ -17,6 +17,7 @@ import { Header,
    ResponsiveContext,
    Anchor,
    Stack,
+   Meter,
    Image,
    Text,
    Card,
@@ -26,7 +27,19 @@ import { Header,
    Grid,
    Button as GrommetButton, Grommet } from 'grommet';
 
-import { Home, Accessibility, Bike, Edit, Projects, Clock, Help, UserFemale,ChatOption, Facebook, Gamepad, Map, Monitor, Favorite, ShareOption} from 'grommet-icons';
+import { Home, Location,
+  System,
+  ShieldSecurity,
+  Tasks,
+  User,
+  Catalog,
+  ChatOption,
+  Technology,
+  Wifi,
+  Language,
+  Cpu,
+  Accessibility, Bike, Edit, Projects, Clock, Help, UserFemale, Facebook, 
+  Gamepad, Map, Monitor, Favorite, ShareOption} from 'grommet-icons';
 import { hpe } from 'grommet-theme-hpe';
 import { Link } from 'react-router-dom';
 import { deepMerge } from 'grommet/utils';
@@ -39,6 +52,7 @@ function App() {
     <HeaderNav/>
     <TopMain/>
     <GridMain/>
+    <Skills/>
     <FooterBot/>
   </Grommet>
    
@@ -46,9 +60,15 @@ function App() {
 }
 
 const customTheme = deepMerge(grommet, {
-  paragraph: {
+  global: {
     font: {
       family: 'Comic Sans MS',
+    },
+  },
+  card: {
+    footer: {
+      pad: { horizontal: 'medium', vertical: 'small' },
+      background: '#FFFFFF27',
     },
   },
 });
@@ -58,7 +78,7 @@ function HeaderNav() {
     <>
     <Header background="dark-1" pad="medium">
       <Box direction="row" align="center" gap="small">
-        Resize the page to collapse the Nav into a Menu
+        "Une vie sans examen ne vaut pas la peine d’être vécue" (Socrate - 399 av. J.-C)
       </Box>
       <ResponsiveContext.Consumer>
         {responsive =>
@@ -66,16 +86,18 @@ function HeaderNav() {
             <Menu
               label="Click me"
               items={[
-                { label: 'This is', onClick: () => {} },
-                { label: 'The Menu', onClick: () => {} },
-                { label: 'Component', onClick: () => {} },
+                { label: 'Accueil', onClick: () => {} },
+                { label: 'Expériences', onClick: () => {} },
+                { label: 'Compétences', onClick: () => {} },
+                { label: 'Contact', onClick: () => {} },
               ]}
             />
           ) : (
             <Nav direction="row">
-              <Anchor href="#" label="This is" />
-              <Anchor href="#" label="The Nav" />
-              <Anchor href="#" label="Component" />
+              <Anchor href="#" label="Accueil" />
+              <Anchor href="#" label="Expériences" />
+              <Anchor href="#" label="Compétences" />
+              <Anchor href="#" label="Contact" />
             </Nav>
           )
         }
@@ -91,53 +113,59 @@ function TopMain() {
     <>
         {size === "small" ? (
           <Grommet theme={customTheme}>
-          <Grid
-            rows={{
-              count: 2,
-              size: 'auto',
-            }}
-            margin="large"
-            gap="large"
-            responsive= "true"
-          >
-            <Box margin="large">
-              <Card width="medium" height="medium">
-                    <Stack anchor="bottom-left">
-                      <CardBody height="medium">
-                        <Image
-                          fit="cover"
-                          src={moi}
-                          a11yTitle="aymeric"
-                        />
-                      </CardBody>
-                      <CardHeader
-                        pad={{ horizontal: 'small', vertical: 'small' }}
-                        background="#000000A0"
-                        width="medium"
-                        justify="start"
-                      >
-                        <Avatar a11yTitle="avatar"></Avatar>
-                        <Box textAlign="center">
-                          <Heading level="3" margin="none">
-                            Aymeric
-                          </Heading>
-                          <Text size="small" textAlign="center" weight="bold">DELABARRE</Text>
-                        </Box>
-                      </CardHeader>
-                    </Stack>
-                  </Card>
-            </Box>
-            <Box margin="large">
-              <Paragraph>
-                <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
-                  actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
-                  Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
-              </Paragraph>
-            </Box>
-          </Grid>
-    </Grommet>
+            <Grid
+              rows={{
+                count: 2,
+                size: 'auto',
+              }}
+              margin="large"
+              gap="large"
+              responsive= "true"
+            >
+              <Box margin="large">
+                <Card width="medium" height="medium">
+                      <Stack anchor="bottom-left">
+                        <CardBody height="medium">
+                          <Image
+                            fit="cover"
+                            src={moi}
+                            a11yTitle="aymeric"
+                          />
+                        </CardBody>
+                        <CardHeader
+                          pad={{ horizontal: 'small', vertical: 'small' }}
+                          background="#000000A0"
+                          width="medium"
+                          justify="start"
+                        >
+                          <Avatar a11yTitle="avatar"></Avatar>
+                          <Box textAlign="center">
+                            <Heading level="3" margin="none">
+                              Aymeric
+                            </Heading>
+                            <Text size="small" textAlign="center" weight="bold">DELABARRE</Text>
+                          </Box>
+                        </CardHeader>
+                      </Stack>
+                    </Card>
+              </Box>
+              <Box margin="large">
+                <Paragraph>
+                  <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
+                    actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
+                    Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
+                </Paragraph>
+                <Paragraph>
+                  <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
+                    actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
+                    Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
+                </Paragraph>
+              </Box>
+            </Grid>
+          </Grommet>
         ) : (
         <Grommet theme={customTheme}>
+          <Heading margin="xlarge" textAlign="center">Profil</Heading>
               <Grid
                 columns={{
                   count: 2,
@@ -175,6 +203,11 @@ function TopMain() {
                       </Card>
                 </Box>
                 <Box margin="large">
+                  <Paragraph>
+                    <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
+                      actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
+                      Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
+                  </Paragraph>
                   <Paragraph>
                     <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
                       actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
@@ -324,6 +357,114 @@ function GridMain() {
     );
 }
 
+
+function Skills(){
+  const data = [
+    {
+      color: 'neutral-1',
+      icon: <Technology size="large" />,
+      title: 'Technologies',
+      subTitle: 'Java - Html - Css - Js - Python - C - React - Php - Symphony - Django - Laravel - MySql',
+    },
+    {
+      color: 'neutral-2',
+      icon: <Cpu size="large" />,
+      title: 'Systèmes d\'exploitations',
+      subTitle: 'Linux - Windows',
+    },
+    {
+      color: 'neutral-3',
+      icon: <Catalog size="large" />,
+      title: 'Logiciels',
+      subTitle: 'Suite Adobe - Suite Office - Wamp - Eclipse - Gitlab - Android Studio',
+    },
+    {
+      color: 'neutral-4',
+      icon: <ChatOption size="large" />,
+      title: 'Soft Skills',
+      subTitle: 'Orgnaisé - Travailleur - Dynamique - Ponctuel - Efficace en travail d\'équipe',
+    },
+    {
+      color: 'status-error',
+      icon: <Language size="large" />,
+      title: 'Langues',
+      subTitle: 'Unique identification light',
+    },
+  ];
+  
+  const Identifier = ({ children, title, subTitle, size, ...rest }) => (
+    <Box gap="xsmall" align="center" {...rest}>
+      {children}
+      <Box>
+        <Text margin="xsmall" size="medium" weight="bold">
+          {title}
+        </Text>
+        <Text size={size}>{subTitle}</Text>
+      </Box>
+    </Box>
+  );
+
+  const sizeSkills = React.useContext(ResponsiveContext);
+
+  return(
+    <>
+      {sizeSkills === "small" ? (
+      <Grommet theme={customTheme}>
+        <Box background="dark-1">
+          <Heading margin="xlarge" textAlign="center">Compétences</Heading>
+          <Box pad="large">
+            <Grid gap="xlarge" rows="small" columns={{ count: 'fit', size: 'small' }}>
+              {data.map(value => (
+                <Card background={value.color} key={value.message}>
+                  <CardBody pad="small">
+                    <Identifier
+                      pad="xsmall"
+                      title={value.title}
+                      subTitle={value.subTitle}
+                      size="small"
+                      align="start"
+                    >
+                      {value.icon}
+                    </Identifier>
+                  </CardBody>
+                </Card>
+              ))}
+            </Grid>
+          </Box>
+        </Box>
+      </Grommet>
+      ) : (
+        <Grommet theme={customTheme}>
+          <Box>
+            <Heading margin="xlarge" textAlign="center">Compétences</Heading>
+            <Box pad="large">
+              <Grid gap="xlarge" rows="small" columns={{ count: 'fit', size: 'small' }}>
+                {data.map(value => (
+                  <Card background={value.color} key={value.message}>
+                    <CardBody pad="small">
+                      <Identifier
+                        pad="xsmall"
+                        title={value.title}
+                        subTitle={value.subTitle}
+                        size="small"
+                        align="start"
+                      >
+                        {value.icon}
+                      </Identifier>
+                    </CardBody>
+                  </Card>
+                ))}
+              </Grid>
+            </Box>
+          </Box>
+        </Grommet>
+      )
+      }
+  
+  </>
+  );
+}
+
 function FooterBot() {
   return (
     <>
@@ -332,7 +473,7 @@ function FooterBot() {
       <Text textAlign="center" size="small">
         © 2020 Copyright Aymeric Delabarre
       </Text>
-      <Anchor label="About" />
+      <Anchor href="#" label="À propos" />
     </Footer>
     </>
 );
