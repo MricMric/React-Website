@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
 import moi from './moi.jpg';
+import logoBlagnac from './logo_blagnac.png';
+import logoRtai from './logo_rtai.png';
 import { Header,
    Main, 
    Heading, 
@@ -17,6 +19,7 @@ import { Header,
    ResponsiveContext,
    Anchor,
    Stack,
+   Carousel,
    Meter,
    Image,
    Text,
@@ -34,6 +37,9 @@ import { Home, Location,
   User,
   Catalog,
   ChatOption,
+  Car,
+  Attraction,
+  TreeOption,
   Technology,
   Wifi,
   Language,
@@ -51,6 +57,7 @@ function App() {
   <Grommet theme={hpe}>
     <HeaderNav/>
     <TopMain/>
+    
     <GridMain/>
     <Skills/>
     <FooterBot/>
@@ -69,6 +76,19 @@ const customTheme = deepMerge(grommet, {
     footer: {
       pad: { horizontal: 'medium', vertical: 'small' },
       background: '#FFFFFF27',
+    },
+  },
+  carousel: {
+    animation: {
+      duration: 400,
+    },
+    icons: {
+      color: 'white',
+    },
+    disabled: {
+      icons: {
+        color: 'white',
+      },
     },
   },
 });
@@ -355,6 +375,33 @@ function GridMain() {
     
     </>
     );
+}
+
+function Education() {
+  return(
+    <>
+  <Grommet theme={customTheme}>
+    <Heading margin="xlarge" textAlign="center">Education</Heading>
+    <Box align="center" pad="small" margin="xlarge" width="xlarge">
+      <Carousel fill>
+        <Box pad="small" background="dark-1">
+          <Avatar size="150px" round="false" margin="medium" fit="cover" src={logoRtai} />
+          <Paragraph>
+            chez Ynov Campus Toulouse. Je suis en parallèle en alternance à la 
+          </Paragraph>
+        </Box>
+        <Box pad="xlarge" background="dark-1">
+          <TreeOption size="xlarge" />
+        </Box>
+        <Box pad="xlarge" background="dark-1">
+          <Car size="xlarge" />
+        </Box>
+      </Carousel>
+    </Box>
+  </Grommet>
+  </>
+  );
+ 
 }
 
 
