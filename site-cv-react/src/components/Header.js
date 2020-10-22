@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../App.css';
 import MyCitations from "./Citations";
 import { Header,
@@ -20,6 +20,9 @@ function HeaderNav() {
     {title: '"L’étendue est la marque de ma puissance. Le temps est la marque de mon impuissance." (Jules Lagneau - 1851–1894)'}
   ];
 
+  const scrollToRef = (ref) => window.scrollTo({ behavior: 'smooth' },0, ref.current.offsetTop);
+  const executeScroll = () => scrollToRef("skills");
+
     return (
       <>
       <Header background="dark-1" pad="medium">
@@ -30,11 +33,11 @@ function HeaderNav() {
               <Menu
                 label="Menu"
                 items={[
-                  { label: 'Accueil', onClick: () => {} },
-                  { label: 'Compétences', onClick: () => {} },
+                  { label: 'Accueil', onClick: () => {window.scrollTo({ top: 0 })} },
+                  { label: 'Compétences', onClick: ({executeScroll}) => {} },
                   { label: 'Education', onClick: () => {} },
                   { label: 'Expériences', onClick: () => {} },
-                  { label: 'Contact', onClick: () => {} },
+                  { label: 'Contact', onClick: () => {window.scrollTo({ bottom: 0 })} },
                 ]}
               />
             ) : (

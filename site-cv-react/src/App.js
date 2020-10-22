@@ -10,6 +10,7 @@ import MyMain from "./components/Main";
 import MySkills from "./components/Skills";
 import MyEducation from "./components/Education";
 import MyExperiences from "./components/Experiences";
+import MyHr from "./components/Hr";
 
 
 function App() {
@@ -19,15 +20,10 @@ function App() {
     <MyHeader/>
       <MyProfil/>
         <MySkills/>
+        <MyHr/>
         <MyMain/>
         <MyEducation/>
-        <hr  style={{
-    color: '#000000',
-    backgroundColor: '#000000',
-    height: .5,
-    borderColor : '#000000',
-    width : '50%'
-}}/>
+        <MyHr/>
         <MyExperiences/>
       <MyFooter/>
   </Grommet>
