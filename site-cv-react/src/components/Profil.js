@@ -14,8 +14,7 @@ import { Heading,
     Card,
     CardHeader,
     CardBody,
-    Grid,
-    Button as GrommetButton, Grommet } from 'grommet';
+    Grid, Grommet } from 'grommet';
 
 const customTheme = deepMerge(grommet, {
     global: {

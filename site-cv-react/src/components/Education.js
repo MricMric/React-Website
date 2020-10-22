@@ -13,8 +13,7 @@ import { Tabs,
     Text,
     ResponsiveContext,
     Image,
-    Box, 
-    Button as GrommetButton, Grommet } from 'grommet';
+    Box, Grommet } from 'grommet';
 
 
 const customTheme = deepMerge(grommet, {

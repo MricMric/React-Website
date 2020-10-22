@@ -6,8 +6,7 @@ import { Heading,
     Text,
     Card,
     CardBody,
-    Grid,
-    Button as GrommetButton, Grommet } from 'grommet';
+    Grid, Grommet } from 'grommet';
 
 import { Catalog, ChatOption, Technology, Language, Cpu } from 'grommet-icons';
 import { deepMerge } from 'grommet/utils';
@@ -99,7 +98,7 @@ function Skills(){
             <Box pad="large">
               <Grid gap="xlarge" rows="small" columns={{ count: 'fit', size: 'small' }}>
                 {data.map(value => (
-                  <Card background={value.color} key={value.message}>
+                  <Card key={value.key} background={value.color} key={value.message}>
                     <CardBody pad="small">
                       <Identifier
                         pad="xsmall"
@@ -124,7 +123,7 @@ function Skills(){
               <Box pad="large">
                 <Grid gap="xlarge" rows="small" columns={{ count: 'fit', size: 'small' }}>
                   {data.map(value => (
-                    <Card background={value.color} key={value.message}>
+                    <Card key={value.key} background={value.color} key={value.message}>
                       <CardBody pad="small">
                         <Identifier
                           pad="xsmall"

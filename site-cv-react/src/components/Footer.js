@@ -2,9 +2,7 @@ import React from 'react';
 import '../App.css';
 import { Box, 
     Footer,
-    Anchor,
-    Text,
-    Button as GrommetButton} from 'grommet';
+    Text} from 'grommet';
 
 
 

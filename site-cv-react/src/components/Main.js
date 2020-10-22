@@ -1,15 +1,7 @@
 import React from 'react';
 import '../App.css';
-
-
-import { Main,
-    Box, 
-    ResponsiveContext,
-    Text,
-    Grid,
-    Button as GrommetButton, Grommet } from 'grommet';
- 
-    import { Accessibility, Bike, Edit, Gamepad, Map, Monitor} from 'grommet-icons';
+import { Box, ResponsiveContext, Text, Grid, Grommet } from 'grommet'; 
+import { Accessibility, Bike, Edit, Gamepad, Map, Monitor} from 'grommet-icons';
 
 
 function MyMain() {
