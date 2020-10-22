@@ -2,13 +2,14 @@ import React from 'react';
 import '../App.css';
 import { Box, ResponsiveContext, Text, Grid, Grommet } from 'grommet'; 
 import { Accessibility, Bike, Edit, Gamepad, Map, Monitor} from 'grommet-icons';
-
+import MyHr from "./Hr";
 
 function MyMain() {
     const sizeIcons = React.useContext(ResponsiveContext);
     return (
       <>
         {sizeIcons === "small" ? (
+          <>
           <Grommet>
             <Box background="dark-1">
             <Grid
@@ -51,7 +52,7 @@ function MyMain() {
             responsive= "true"
             >
               <Box margin="xlarge" gap="medium" align="center" animation="fadeIn">
-                <Accessibility size='xlarge' color='balck' align='center' jusitfy='center'>
+                <Accessibility size='xlarge' color='black' align='center' jusitfy='center'>
                 </Accessibility>
                 <Text size='35px' weight="bold">Sociale</Text>
                 <Text size='20px' textAlign="center">Facebook - Twitter - Instagram</Text>
@@ -71,7 +72,11 @@ function MyMain() {
             </Grid>
           </Box>
         </Grommet>
+        <MyHr/>
+        </>
           ) : (
+            <>
+          <MyHr/>
           <Grommet>
                   <Grid
               columns={{
@@ -132,6 +137,7 @@ function MyMain() {
               </Grid>
             </Box>
       </Grommet>
+      </>
           )
         }
       

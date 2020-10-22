@@ -11,6 +11,7 @@ import MySkills from "./components/Skills";
 import MyEducation from "./components/Education";
 import MyExperiences from "./components/Experiences";
 import MyHr from "./components/Hr";
+import MyFormulaire from "./components/Formulaire";
 
 
 function App() {
@@ -20,11 +21,11 @@ function App() {
     <MyHeader/>
       <MyProfil/>
         <MySkills/>
-        <MyHr/>
         <MyMain/>
         <MyEducation/>
         <MyHr/>
         <MyExperiences/>
+        <MyFormulaire/>
       <MyFooter/>
   </Grommet>
    
