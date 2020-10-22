@@ -25,6 +25,7 @@ function HeaderNav() {
                   { label: 'Accueil', onClick: () => {} },
                   { label: 'Expériences', onClick: () => {} },
                   { label: 'Compétences', onClick: () => {} },
+                  { label: 'Education', onClick: () => {} },
                   { label: 'Contact', onClick: () => {} },
                 ]}
               />
@@ -33,6 +34,7 @@ function HeaderNav() {
                 <Anchor href="#" label="Accueil" />
                 <Anchor href="#" label="Expériences" />
                 <Anchor href="#" label="Compétences" />
+                <Anchor href="#" label="Education" />
                 <Anchor href="#" label="Contact" />
               </Nav>
             )

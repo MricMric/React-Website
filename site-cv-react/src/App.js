@@ -9,6 +9,7 @@ import MyProfil from "./components/Profil";
 import MyMain from "./components/Main";
 import MySkills from "./components/Skills";
 import MyEducation from "./components/Education";
+import MyExperiences from "./components/Experiences";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <MyMain/>
         <MySkills/>
         <MyEducation/>
+        <MyExperiences/>
       <MyFooter/>
   </Grommet>
    
