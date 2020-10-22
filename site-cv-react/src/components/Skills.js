@@ -19,25 +19,6 @@ import { grommet } from 'grommet/themes';
             family: 'Comic Sans MS',
           },
         },
-        card: {
-          footer: {
-            pad: { horizontal: 'medium', vertical: 'small' },
-            background: '#FFFFFF27',
-          },
-        },
-        carousel: {
-          animation: {
-            duration: 400,
-          },
-          icons: {
-            color: 'white',
-          },
-          disabled: {
-            icons: {
-              color: 'white',
-            },
-          },
-        },
       });
 
 

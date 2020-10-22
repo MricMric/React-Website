@@ -14,29 +14,6 @@ import {
 
 function Formulaire() {
 
-    const passwordRulesStrong = [
-        {
-          regexp: new RegExp('(?=.*?[A-Z])'),
-          message: 'One uppercase letter',
-          status: 'error',
-        },
-        {
-          regexp: new RegExp('(?=.*?[a-z])'),
-          message: 'One lowercase letter',
-          status: 'error',
-        },
-        {
-          regexp: new RegExp('(?=.*?[#?!@$ %^&*-])'),
-          message: 'One special character',
-          status: 'error',
-        },
-        {
-          regexp: new RegExp('.{8,}'),
-          message: 'At least 8 characters',
-          status: 'error',
-        },
-      ];
-
     return (    
       <Grommet>
         <Box fill align="center" justify="center">
@@ -56,9 +33,9 @@ function Formulaire() {
                 <MaskedInput
                   name="email"
                   mask={[
-                    { regexp: /^[\w\-_.]+$/, placeholder: 'example' },
+                    { regexp: /^[\w\-_.]+$/, placeholder: 'exemple' },
                     { fixed: '@' },
-                    { regexp: /^[\w]+$/, placeholder: 'my' },
+                    { regexp: /^[\w]+$/, placeholder: 'gmail' },
                     { fixed: '.' },
                     { regexp: /^[\w]+$/, placeholder: 'com' },
                   ]}
@@ -68,8 +45,8 @@ function Formulaire() {
                 <TextArea name="comments" />
               </FormField>
               <Box direction="row" justify="between" margin={{ top: 'medium' }}>
-                <Button type="reset" label="Annuler" />
-                <Button type="submit" label="Envoyer" primary />
+                <Button type="reset" label="Annuler" color="black" />
+                <Button type="submit" label="Envoyer" color="black" />
               </Box>
             </Form>
           </Box>
