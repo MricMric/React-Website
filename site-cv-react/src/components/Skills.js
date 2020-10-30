@@ -79,7 +79,7 @@ function Skills(){
             <Box pad="large">
               <Grid gap="xlarge" rows="small" columns={{ count: 'fit', size: 'small' }}>
                 {data.map(value => (
-                  <Card key={value.key} background={value.color} key={value.message}>
+                  <Card background={value.color} key={value.message}>
                     <CardBody pad="small">
                       <Identifier
                         pad="xsmall"
@@ -104,7 +104,7 @@ function Skills(){
               <Box pad="large">
                 <Grid gap="xlarge" rows="small" columns={{ count: 'fit', size: 'small' }}>
                   {data.map(value => (
-                    <Card key={value.key} background={value.color} key={value.message}>
+                    <Card background={value.color} key={value.message}>
                       <CardBody pad="small">
                         <Identifier
                           pad="xsmall"

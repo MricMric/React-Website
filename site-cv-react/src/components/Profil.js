@@ -81,9 +81,9 @@ function Profil() {
                     Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
                 </Paragraph>
                 <Paragraph>
-                  <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
-                    actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
-                    Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
+                    <Text size='22px' weight="bold">J</Text>e suis diplômé d'un <Text size='17' weight="bold">Baccalauréat Scientifique</Text>, Science et Vie de la 
+                    Terre, option Informatique Science du Numérique. Après cela j'ai été diplômé d'un <Text size='17' weight="bold">Diplôme Universitaire de 
+                    Technologie</Text> en Informatique à Blagnac. Puis, une <Text size='17px' weight="bold">licence professionnelle Responsable Technique d'Application internet</Text> en 2020.
                 </Paragraph>
               </Box>
             </Grid>
@@ -134,10 +134,10 @@ function Profil() {
                       Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
                   </Paragraph>
                   <Paragraph>
-                    <Text size='22px' weight="bold">B</Text>onjour, je m'appelle Aymeric, j'ai 21 ans et je suis 
-                      actuellement en première année de <Text size='17px' weight="bold">Mastère 1 Développement Web</Text> chez 
-                      Ynov Campus Toulouse. Je suis en parallèle en alternance à la <Text size='17px' weight="bold">Banque Populaire Caise d'Eparge (BPCE-IT)</Text>.
-                  </Paragraph>
+                    <Text size='22px' weight="bold">J</Text>e suis diplômé d'un <Text size='17' weight="bold">Baccalauréat Scientifique</Text>, Science et Vie de la 
+                    Terre, option Informatique Science du Numérique. Après cela j'ai été diplômé d'un <Text size='17' weight="bold">Diplôme Universitaire de 
+                    Technologie</Text> en Informatique à Blagnac. Puis, une <Text size='17px' weight="bold">licence professionnelle Responsable Technique d'Application internet</Text> en 2020.
+                </Paragraph>
                 </Box>
               </Grid>
         </Grommet>

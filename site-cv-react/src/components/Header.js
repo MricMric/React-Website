@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import '../App.css';
 import MyCitations from "./Citations";
 import { Header,
@@ -20,8 +20,6 @@ function HeaderNav() {
     {title: '"L’étendue est la marque de ma puissance. Le temps est la marque de mon impuissance." (Jules Lagneau - 1851–1894)'}
   ];
 
-  const scrollToRef = (ref) => window.scrollTo({ behavior: 'smooth' },0, ref.current.offsetTop);
-  const executeScroll = () => scrollToRef("skills");
 
     return (
       <>
