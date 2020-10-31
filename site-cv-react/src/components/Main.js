@@ -5,10 +5,10 @@ import { Accessibility, Bike, Edit, Gamepad, Map, Monitor} from 'grommet-icons';
 import MyHr from "./Hr";
 
 function MyMain() {
-    const sizeIcons = React.useContext(ResponsiveContext);
+    const size = React.useContext(ResponsiveContext);
     return (
       <>
-        {sizeIcons === "small" ? (
+        {size === "small" ? (
           <>
           <Grommet>
             <Box background="dark-1">

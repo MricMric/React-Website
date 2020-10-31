@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import moi from '../moi.jpg';
+import me from '../pictures/me.jpg';
 import { deepMerge } from 'grommet/utils';
 import { grommet } from 'grommet/themes';
 import { Heading, 
@@ -33,10 +33,10 @@ const customTheme = deepMerge(grommet, {
 
 
 function Profil() {
-    const size = React.useContext(ResponsiveContext);
+    const sizeProfil = React.useContext(ResponsiveContext);
   return (
     <>
-        {size === "small" ? (
+        {sizeProfil === "small" ? (
           <Grommet theme={customTheme}>
             <Grid
               rows={{
@@ -53,7 +53,7 @@ function Profil() {
                         <CardBody height="medium">
                           <Image
                             fit="cover"
-                            src={moi}
+                            src={me}
                             a11yTitle="aymeric"
                           />
                         </CardBody>
@@ -106,7 +106,7 @@ function Profil() {
                           <CardBody height="medium">
                             <Image
                               fit="cover"
-                              src={moi}
+                              src={me}
                               a11yTitle="aymeric"
                             />
                           </CardBody>

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import '../App.css';
 import { deepMerge } from 'grommet/utils';
 import { grommet } from 'grommet/themes';
-import logoBlagnac from '../logo_blagnac.png';
-import logoRtai from '../logo_rtai.png';
-import logoYnov from '../logo_ynov.png';
-import logoLycee from '../logo_lycee.png';
+import logoBlagnac from '../pictures/logo_blagnac.png';
+import logoRtai from '../pictures/logo_rtai.png';
+import logoYnov from '../pictures/logo_ynov.png';
+import logoLycee from '../pictures/logo_lycee.png';
 import { Tabs,
     Tab,
     Heading,
@@ -27,10 +27,10 @@ const customTheme = deepMerge(grommet, {
 function Education() {
     const [index, setIndex] = useState();
     const onActive = nextIndex => setIndex(nextIndex);
-    const sizeIcons = React.useContext(ResponsiveContext);
+    const sizeEducation = React.useContext(ResponsiveContext);
     return(
         <>
-        {sizeIcons === "small" ? (
+        {sizeEducation === "small" ? (
       
     <Grommet theme={customTheme}>
     <Heading margin="xlarge" textAlign="center">Education</Heading>
